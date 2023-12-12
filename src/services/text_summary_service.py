@@ -7,22 +7,13 @@ class TextSummaryService():
         self.inited = False
 
     def setup(self):
-        if self.inited == True:
-            return
-        
+        if self.inited == True: return
         self.inited = True
         self.punctuator = Punctuator()
-        self.punctuator.setup()
         self.summarizer = Summarizer()
-        self.summarizer.setup()
     
-    def handle(self, text: str):
-        blocks = list(filter(lambda x : x != '', text.split('\n\n')))
-        preparedBlocks = list()
-        for block in blocks:
-            preparedBlock = self.punctuator.punctuate(block)
-            preparedBlocks.append(preparedBlock)
-        
-        summary = self.summarizer.summarize(preparedBlocks)
-        return preparedBlocks, summary
+    def handle(self, text: str):        
+        preparedText = self.punctuator.punctuate(text)
+        summary = self.summarizer.summarize(text)
+        return preparedText, summary
 

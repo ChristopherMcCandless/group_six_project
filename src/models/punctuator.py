@@ -1,9 +1,8 @@
 from sbert_punc_case_ru import SbertPuncCase
 
 class Punctuator:
-
-    def setup(self):
-        #TODO тож неуверен что эта модель подходит почекать еще
+    
+    def __init__(self):
         self.model = SbertPuncCase()
 
     def punctuate(self, text: str):
