@@ -1,5 +1,5 @@
 import streamlit as st
-from src.services.text_summary_service import TextSummaryService
+from services.text_summary_service import TextSummaryService
 
 @st.cache_data
 def get_handler():
