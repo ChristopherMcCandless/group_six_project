@@ -1,3 +1,5 @@
+import sys
+sys.path.insert(0, '../src')
 import streamlit as st
 from services.text_summary_service import TextSummaryService
 

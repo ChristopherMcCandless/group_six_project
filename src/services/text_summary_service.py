@@ -1,5 +1,5 @@
-from src.models.punctuator import Punctuator
-from src.models.summarizer import Summarizer
+from models.punctuator import Punctuator
+from models.summarizer import Summarizer
 
 class TextSummaryService():
     
