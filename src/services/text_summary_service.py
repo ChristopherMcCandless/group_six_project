@@ -1,19 +1,14 @@
-from models.punctuator import Punctuator
-from models.summarizer import Summarizer
+from src.models.summarizer import Summarizer
+from src.models.translator import Translator
 
 class TextSummaryService():
     
     def __init__(self):
-        self.inited = False
-
-    def setup(self):
-        if self.inited == True: return
-        self.inited = True
-        self.punctuator = Punctuator()
+        self.translator = Translator()
         self.summarizer = Summarizer()
-    
-    def handle(self, text: str):        
-        preparedText = self.punctuator.punctuate(text)
-        summary = self.summarizer.summarize(text)
-        return preparedText, summary
 
+    def handle_ru(self, text: str):
+        enText = self.translator.ru_en(text)
+        original_summary = self.summarizer.summarize(enText)
+        ruSummary = self.translator.en_ru(original_summary)
+        return original_summary, ruSummary
