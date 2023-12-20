@@ -13,4 +13,4 @@
 
 ## Web-клиент
 ### Для запуска
-> streamlit run streamlit_startup.py
+```> streamlit run streamlit_startup.py```
