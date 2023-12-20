@@ -28,9 +28,11 @@
 - `$ source venv_name/bin/activate` *активируйте новое окружение*
   
 2. Загрузка и запуск проекта:
+> [!NOTE]
+> *Для успешного запуска приложения, пожалуйста, проделайте следующие шаги:*
 - `$ git clone git@github.com:<your_gitname/project_name>.git` *(создайте клон проекта)*
-- `$pip install -r requirements.txt` *(установите все необходимые библиотеки из файла)*
-- `$streamlit run streamlit_startup.py` *(запустите приложение)*
+- `$ pip install -r requirements.txt` *(установите все необходимые библиотеки из файла)*
+- `$ streamlit run streamlit_startup.py` *(запустите приложение)*
 - Перейдите по адресу: http://10.0.2.15:8501/ в браузере
 
 ## Использование
