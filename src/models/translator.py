@@ -1,11 +1,26 @@
 from transformers import pipeline
+import time as time
 
 class Translator:
     
     def ru_en(self, text: str):
+        start = time.time()
+        print(f'translator ru_en started')
+        
         model = pipeline("translation", 'Helsinki-NLP/opus-mt-ru-en')
-        return model(text)[0]['translation_text']
+        rslt = model(text)[0]['translation_text']
+
+        end = time.time()
+        print(f'translaror ru-en finished, elapsed: {end - start} sec')
+        return rslt
     
-    def en_ru(self, text: str): 
+    def en_ru(self, text: str):
+        start = time.time()
+        print(f'translator en-ru started')
+        
         model = pipeline("translation", 'Helsinki-NLP/opus-mt-en-ru')
-        return model(text)[0]['translation_text']
+        rslt = model(text)[0]['translation_text']
+        
+        end = time.time()
+        print(f'translaror en-ru finished, elapsed: {end - start} sec')
+        return rslt

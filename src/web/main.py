@@ -7,21 +7,37 @@ def get_handler():
     return handler
 
 def show():
+    if 'start_btn' in st.session_state and st.session_state.start_btn == True:
+        st.session_state.running = True
+    else:
+        st.session_state.running = False
+
+
     st.title('Выделение основных тезисов из вашего текста')
     text = st.text_area(
         label='',
         placeholder='Введите текст',
-        key='target_text')
+        key='target_text',
+        height=320)
 
-    btn = st.button('Сформировать конспект', type='primary')
+    btn = st.button(
+        'Сформировать конспект', 
+        type='primary',
+        key='start_btn',
+        disabled=st.session_state.running)
 
     if btn and text:
         originalSummary, summary = get_handler().handle_ru(text)
-        #TODO сделать нормальный вывод
-        st.write('## Оригинальное саммари:', )
-        st.write(originalSummary)
+        print(originalSummary)
+        
+        st.session_state.output = summary
+        st.experimental_rerun()
+
+    
+    if 'output' in st.session_state:
         st.write('## Итоговый конспект:')
-        st.write(summary)
+        st.write(st.session_state.output)
+               
     
     
 
