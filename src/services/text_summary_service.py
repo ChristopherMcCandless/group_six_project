@@ -2,6 +2,9 @@ from src.models.summarizer import Summarizer
 from src.models.translator import Translator
 
 class TextSummaryService():
+    """
+    Оркестратор пайплайна суммаризации
+    """
     
     def __init__(self):
         self.translator = Translator()

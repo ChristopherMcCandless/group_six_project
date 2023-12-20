@@ -2,6 +2,11 @@ from transformers import pipeline
 import time as time
 
 class Translator:
+    """
+    Перевод текста 
+    ru-en
+    en-ru
+    """
     
     def ru_en(self, text: str):
         start = time.time()

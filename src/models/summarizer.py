@@ -2,6 +2,9 @@ from transformers import pipeline
 import time as time
 
 class Summarizer:
+    """
+    Решает задачу саммаризации
+    """
        
     def summarize(self, text: str):
         start = time.time()
@@ -9,7 +12,7 @@ class Summarizer:
 
         summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
         model_result = summarizer(
-            text, 
+            text,
             do_sample=False)
         result = model_result[0]['summary_text']
 
