@@ -1,13 +1,15 @@
 import streamlit as st
 from src.services.text_summary_service import TextSummaryService
 
+
 @st.cache_data
 def get_handler():
     handler = TextSummaryService()
     return handler
 
+
 def show():
-    if 'start_btn' in st.session_state and st.session_state.start_btn == True:
+    if 'start_btn' in st.session_state and st.session_state.start_btn is True:
         st.session_state.running = True
     else:
         st.session_state.running = False
@@ -22,7 +24,7 @@ def show():
         height=320)
     # Выводим кнопку на запуск саммаризации
     btn = st.button(
-        'Сформировать конспект', 
+        'Сформировать конспект',
         type='primary',
         key='start_btn',
         disabled=st.session_state.running)
@@ -30,17 +32,10 @@ def show():
     if btn and text:
         originalSummary, summary = get_handler().handle_ru(text)
         print(originalSummary)
-        
+
         st.session_state.output = summary
         st.experimental_rerun()
 
-    
     if 'output' in st.session_state:
         st.write('## Итоговый конспект:')
         st.write(st.session_state.output)
-               
-    
-    
-
-
-
