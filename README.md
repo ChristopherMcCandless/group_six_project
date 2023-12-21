@@ -24,7 +24,7 @@
 - `$ cd folder_name` *перейдите в нее*
 - `$ sudo apt-get update` *проверьте наличие обновлений*
 - `$ sudo apt install python3-venv` *установите пакет для работы с виртуальным окружением*
-- `$ python3 -m venv venv_name` *создайте новое окружение, где venv_name - его название*
+- `$ python3 -m venv venv_name` *создайте новое окружение*
 - `$ source venv_name/bin/activate` *активируйте новое окружение*
   
 2. Загрузка и запуск проекта:
