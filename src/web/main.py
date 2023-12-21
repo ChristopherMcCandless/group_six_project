@@ -12,14 +12,15 @@ def show():
     else:
         st.session_state.running = False
 
-
+    # Выводим заголовок страницы
     st.title('Выделение основных тезисов из вашего текста')
+    # Выводим форму для ввода текста
     text = st.text_area(
         label='',
         placeholder='Введите текст',
         key='target_text',
         height=320)
-
+    # Выводим кнопку на запуск саммаризации
     btn = st.button(
         'Сформировать конспект', 
         type='primary',
