@@ -1,5 +1,5 @@
--f https://huggingface.co/kontur-ai/sbert_punc_case_ru
-sbert_punc_case_ru
+#-f https://huggingface.co/kontur-ai/sbert_punc_case_ru
+#sbert_punc_case_ru
 streamlit
 tensorflow
 torch

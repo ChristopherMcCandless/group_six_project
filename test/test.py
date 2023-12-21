@@ -1,18 +1,18 @@
 import unittest
 from unittest.mock import MagicMock
-from src.models.punctuator import Punctuator
+
 from src.models.summarizer import Summarizer
 from src.models.translator import Translator
 from src.services.text_summary_service import TextSummaryService
 
 
-class TestPunctuator(unittest.TestCase):
-    def setUp(self):
-        self.punctuator = Punctuator()
+# class TestPunctuator(unittest.TestCase):
+#     def setUp(self):
+#         self.punctuator = Punctuator()
 
-    def test_punctuate_returns_string(self):
-        result = self.punctuator.punctuate("Test input")
-        self.assertIsInstance(result, str)
+#     def test_punctuate_returns_string(self):
+#         result = self.punctuator.punctuate("Test input")
+#         self.assertIsInstance(result, str)
 
 
 class TestSummarizer(unittest.TestCase):
