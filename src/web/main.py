@@ -30,9 +30,7 @@ def show():
         disabled=st.session_state.running)
 
     if btn and text:
-        originalSummary, summary = get_handler().handle_ru(text)
-        print(originalSummary)
-
+        summary = get_handler().handle(text, useV2=True)
         st.session_state.output = summary
         st.experimental_rerun()
 
