@@ -1,11 +1,12 @@
 from transformers import pipeline
 import time as time
 
+
 class Summarizer:
     """
     Решает задачу саммаризации
     """
-       
+
     def summarize(self, text: str):
         start = time.time()
         print(f'summarizer started')
