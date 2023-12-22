@@ -22,7 +22,8 @@
 
 ## Начало работы
 > [!TIP]
-> Открыть для тестирования в Strimlit Cloud: [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://groupsixproject-8e6rvezdfhfdjqxjrdzft8.streamlit.app/)
+> Открыть для тестирования в Streamlit Cloud:
+> [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://groupsixproject-8e6rvezdfhfdjqxjrdzft8.streamlit.app/)
 1. Настройки для локального запуска проекта:
 > [!IMPORTANT]
 > *Перед началом работы создайте папку на вашем компьютере под управлением ОС Linux, которая будет содержать проект. Для этого выполните следующие команды в Вашем терминале:*
